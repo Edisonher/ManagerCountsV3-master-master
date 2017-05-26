@@ -103,7 +103,9 @@ public class DrawerVendActivity extends AppCompatActivity
             fragmentoGenerico = new FragmentoInicioVend();
         }
         else if (id == R.id.nav_Clientes) {
-            fragmentoGenerico = new FragmentoClientes();
+            //fragmentoGenerico = new FragmentoClientes();
+            //fragmentoGenerico = new Recycler_clientes();
+            fragmentoGenerico = new FragmentPruebarecy();
         }
         else if (id == R.id.nav_Inventario) {
             fragmentoGenerico = new FragmentProductos();

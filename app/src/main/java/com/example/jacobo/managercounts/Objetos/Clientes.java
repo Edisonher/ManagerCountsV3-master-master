@@ -5,40 +5,31 @@ package com.example.jacobo.managercounts.Objetos;
  */
 
 public class Clientes {
-    String cedula;
-    String nombre;
-    String apellido;
-    String telefono;
-    String direccion;
-    String barrio;
-    String deuda;
-    String fechapago;
+    public String apellido;
+    public String barrio;
+    public String cedula;
+    public String deuda;
+    public String direccion;
+    public String fechapago;
+    public String nombre;
+    public String telefono;
 
-    public Clientes(String cedula, String nombre, String apellido, String telefono, String direccion, String barrio, String deuda, String fechapago) {
-        this.cedula = cedula;
-        this.nombre = nombre;
+
+
+
+
+    public Clientes() {
+    }
+
+    public Clientes(String apellido, String barrio, String cedula, String deuda, String direccion, String fechapago, String nombre, String telefono) {
         this.apellido = apellido;
-        this.telefono = telefono;
-        this.direccion = direccion;
         this.barrio = barrio;
-        this.deuda = deuda;
-        this.fechapago = fechapago;
-    }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
         this.cedula = cedula;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
+        this.deuda = deuda;
+        this.direccion = direccion;
+        this.fechapago = fechapago;
         this.nombre = nombre;
+        this.telefono = telefono;
     }
 
     public String getApellido() {
@@ -49,28 +40,20 @@ public class Clientes {
         this.apellido = apellido;
     }
 
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
     public String getBarrio() {
         return barrio;
     }
 
     public void setBarrio(String barrio) {
         this.barrio = barrio;
+    }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 
     public String getDeuda() {
@@ -81,6 +64,14 @@ public class Clientes {
         this.deuda = deuda;
     }
 
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
     public String getFechapago() {
         return fechapago;
     }
@@ -88,4 +79,22 @@ public class Clientes {
     public void setFechapago(String fechapago) {
         this.fechapago = fechapago;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+
 }

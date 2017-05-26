@@ -9,8 +9,8 @@ import android.widget.EditText;
 
 import com.example.jacobo.managercounts.Objetos.Clientes;
 import com.example.jacobo.managercounts.Objetos.FirebaseReferences;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+//import com.google.firebase.database.DatabaseReference;
+//import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistroActivity extends AppCompatActivity {
 
@@ -19,8 +19,8 @@ public class RegistroActivity extends AppCompatActivity {
 
     String cedula,nombre,apellido,direccion,barrio, correo, telefono;
 
-    DatabaseReference myRef;
-    final FirebaseDatabase database = FirebaseDatabase.getInstance();
+    //DatabaseReference myRef;
+    //final FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +55,8 @@ public class RegistroActivity extends AppCompatActivity {
 
                 Clientes cliente = new Clientes(cedula,nombre,apellido,telefono,direccion,barrio,"","");
 
-                myRef = database.getReference(FirebaseReferences.CLIENTES_REFERENCE).child(cedula);
-                myRef.setValue(cliente);
+                //myRef = database.getReference(FirebaseReferences.CLIENTES_REFERENCE).child(cedula);
+                //myRef.setValue(cliente);
 
                 setResult(RESULT_OK, i);
 

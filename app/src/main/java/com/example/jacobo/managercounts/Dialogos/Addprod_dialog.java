@@ -23,11 +23,11 @@ import com.example.jacobo.managercounts.Objetos.FirebaseReferences;
 import com.example.jacobo.managercounts.Objetos.Productos;
 import com.example.jacobo.managercounts.R;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
+//import com.google.firebase.database.DatabaseReference;
+//import com.google.firebase.database.FirebaseDatabase;
+//import com.google.firebase.storage.FirebaseStorage;
+//import com.google.firebase.storage.StorageReference;
+//import com.google.firebase.storage.UploadTask;
 
 import static android.app.Activity.RESULT_OK;
 import java.util.HashMap;
@@ -40,11 +40,11 @@ public class Addprod_dialog extends DialogFragment{
     private static final String TAG = Addprod_dialog.class.getSimpleName();
 
 
-    DatabaseReference myRefp;
+    //DatabaseReference myRefp;
 
     String nombre,precio;
     private static final int GALLERY_INTENT= 1 ;
-    private StorageReference subirImagen;
+    //private StorageReference subirImagen;
     private ProgressDialog myProgressDialog;
     ImageButton ImagenBoton;
     EditText nombreprod;
@@ -68,12 +68,12 @@ public class Addprod_dialog extends DialogFragment{
 
         builder.setView(v);
 
-        final FirebaseDatabase databasep = FirebaseDatabase.getInstance();
+       // final FirebaseDatabase databasep = FirebaseDatabase.getInstance();
 
         nombreprod = (EditText) v.findViewById(R.id.eNombreprod);
         final EditText precioprod = (EditText) v.findViewById(R.id.ePrecioprod);
 
-        subirImagen = FirebaseStorage.getInstance().getReference();
+        //subirImagen = FirebaseStorage.getInstance().getReference();
 
         Button guardar = (Button) v.findViewById(R.id.bAdguardarprod);
         Button cancelar = (Button) v.findViewById(R.id.bcancelarprod);
@@ -92,8 +92,12 @@ public class Addprod_dialog extends DialogFragment{
                         Productos producto = new Productos(nombre,precio);
 
                         //Clientes cliente = new Clientes("","","","","","","","");
+
+                        /*
                         myRefp = databasep.getReference(FirebaseReferences.PRODUCTOS_REFERENCE).child(nombre);
                         myRefp.setValue(producto);
+                        */
+
                         /*Snackbar.make(v, "Replace with your own action", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();*/
                        dismiss();
@@ -135,7 +139,7 @@ public class Addprod_dialog extends DialogFragment{
             nombre = nombreprod.getText().toString();
 
             Uri uri = data.getData();
-            StorageReference filepath = subirImagen.child("FotosProductos").child(nombre);
+           /* StorageReference filepath = subirImagen.child("FotosProductos").child(nombre);
             //StorageReference filepath = subirImagen.child("FotosClientes").child(uri.getLastPathSegment());
             filepath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
@@ -148,7 +152,7 @@ public class Addprod_dialog extends DialogFragment{
 
 
                 }
-            });
+            });*/
         }
     }
 
